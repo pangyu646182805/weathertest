@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">皮歪天气</string>
+    <string name="sample">--</string>
+    <string name="city_manage">城市管理</string>
+    <string name="add_city">添加城市</string>
+    <string name="air_quality">空气质量指数</string>
+    <string name="add_location">正在定位...</string>
+    <string name="city">city</string>
+    <string name="weather">weather</string>
+    <string name="weather_x">38°</string>
+    <string name="weather_y">26°</string>
+    <string name="update_time">_-_ _:_更新</string>
+    <string name="tmp">__°</string>
+    <string name="tmp_max">__↑</string>
+    <string name="tmp_min">__↓</string>
+    <string name="hum">--%</string>
+    <string name="wind">_级</string>
+</resources>

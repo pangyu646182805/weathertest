@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_update_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="5dp"
+        android:text="@string/update_time"
+        android:textColor="#CCCDD2D8"
+        android:textSize="12sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_tmp"
+            style="@style/TextViewWeatherWhite"
+            android:layout_centerInParent="true"
+            android:text="@string/weather_x"
+            android:textSize="80sp"/>
+
+        <TextView
+            android:id="@+id/tv_tmp_min"
+            style="@style/TextViewWeatherWhite"
+            android:layout_alignBaseline="@+id/tv_tmp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/tv_tmp"
+            android:text="@string/tmp_min"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_tmp_max"
+            style="@style/TextViewWeatherWhite"
+            android:layout_above="@+id/tv_tmp_min"
+            android:layout_alignLeft="@+id/tv_tmp_min"
+            android:layout_alignStart="@+id/tv_tmp_min"
+            android:text="@string/tmp_max"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_tmp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@mipmap/weather_sunny"/>
+
+        <TextView
+            android:id="@+id/tv_weather"
+            style="@style/TextViewWeatherWhite"
+            android:layout_marginLeft="8dp"
+            android:text="@string/sample"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextViewWeatherWhite"
+            android:layout_marginLeft="15dp"
+            android:text="每小时"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_wet"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/ic_weather_wet"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/iv_wet"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewWeatherWhite"
+                    android:text="空气湿度"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_wet"
+                    style="@style/TextViewWeatherWhite"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/hum"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_wind"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/ic_weather_wind"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/iv_wind"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_wind_desc"
+                    style="@style/TextViewWeatherWhite"
+                    android:text="西北风"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_wind"
+                    style="@style/TextViewWeatherWhite"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/wind"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_temp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/ic_weather_temperature"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/iv_temp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextViewWeatherWhite"
+                    android:text="体感温度"
+                    android:textSize="14dp"/>
+
+                <TextView
+                    android:id="@+id/tv_temp"
+                    style="@style/TextViewWeatherWhite"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tmp"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="20dp"
+        android:background="#4fff"/>
+</LinearLayout>
